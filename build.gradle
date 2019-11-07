@@ -10,7 +10,7 @@ plugins {
 allprojects  {
   apply plugin: 'maven'
 
-  group = 'com.janosgyerik.java-utils'
+  group = 'com.janosgyerik.java.tools'
   version = '1.0-SNAPSHOT'
 }
 

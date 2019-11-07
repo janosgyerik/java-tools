@@ -1,11 +1,11 @@
 package com.janosgyerik.demo.objectstore;
 
 import com.example.tutorial.AddressBookProtos;
-import com.janosgyerik.utils.objectstore.api.ObjectStore;
-import com.janosgyerik.utils.objectstore.impl.CountingPathGenerator;
-import com.janosgyerik.utils.objectstore.impl.Reader;
-import com.janosgyerik.utils.objectstore.impl.SimpleObjectStore;
-import com.janosgyerik.utils.objectstore.impl.Writer;
+import com.janosgyerik.tools.objectstore.api.ObjectStore;
+import com.janosgyerik.tools.objectstore.impl.CountingPathGenerator;
+import com.janosgyerik.tools.objectstore.impl.Reader;
+import com.janosgyerik.tools.objectstore.impl.SimpleObjectStore;
+import com.janosgyerik.tools.objectstore.impl.Writer;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TemporaryFolder;
