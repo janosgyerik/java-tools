@@ -3,33 +3,35 @@
 //systemProp.sonar.login=get-token-from-sonarcloud
 // run ./gradlew sonarqube
 plugins {
-  id "org.sonarqube" version "2.7.1"
-  id 'jacoco'
+    id "org.sonarqube" version "2.7.1"
+    id 'jacoco'
 }
 
-allprojects  {
-  apply plugin: 'maven'
-
-  group = 'com.janosgyerik.java.tools'
-  version = '1.0-SNAPSHOT'
+allprojects {
+    group = 'com.janosgyerik.java.tools'
+    version = '1.0-SNAPSHOT'
 }
 
 subprojects {
-  apply plugin: 'java'
-  apply plugin: 'jacoco'
-  sourceCompatibility = 1.8
-  targetCompatibility = 1.8
-  tasks.withType(JavaCompile) {
-  	options.encoding = 'UTF-8'
-  }
+    apply plugin: 'java'
+    apply plugin: 'jacoco'
+    sourceCompatibility = 1.8
+    targetCompatibility = 1.8
+    tasks.withType(JavaCompile) {
+        options.encoding = 'UTF-8'
+    }
 
-  repositories {
-    jcenter()
-  }
+    repositories {
+        jcenter()
+    }
 
-  dependencies {
-    implementation 'com.google.code.findbugs:jsr305:3.0.2'
-    implementation 'org.assertj:assertj-core:3.14.0'
-    testCompile 'org.junit.jupiter:junit-jupiter:5.5.2'
-  }
+    dependencies {
+        implementation 'com.google.code.findbugs:jsr305:3.0.2'
+        implementation 'org.assertj:assertj-core:3.14.0'
+        testCompile 'org.junit.jupiter:junit-jupiter:5.5.2'
+    }
+
+    test {
+        useJUnitPlatform()
+    }
 }
