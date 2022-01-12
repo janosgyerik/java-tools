@@ -23,6 +23,7 @@ class BfsTest {
     verify(visitor).beforeLevel();
     verify(visitor).visit(start);
     verify(visitor).afterLevel();
+    verify(visitor).extraItemsAfterLevel();
     verifyNoMoreInteractions(visitor);
   }
 
