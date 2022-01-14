@@ -59,6 +59,6 @@ class DequeTest {
   }
 
   static <T> Deque<T> newDeque(Collection<T> values) {
-    return new LinkedListDeque<>(values);
+    return Deque.create(values);
   }
 }
